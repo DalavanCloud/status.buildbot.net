@@ -16,7 +16,7 @@
 	--
 
 	@file		upsuits.js
-	@date		Tue Mar 31 2015 21:05:54
+	@date		Sun Jun 26 2016 20:39:20
 	@author		Pixel Bakkerij
 
 	Copyright (c) 2013 Pixel Bakkerij <http://pixelbakkerij.nl>
