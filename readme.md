@@ -9,6 +9,26 @@ Dustin's AWS account:
     aws --profile s3-sync s3 mb s3://status.buildbot.net
     aws --profile s3-sync s3 sync public s3://status.buildbot.net
 
+This bucket has static website hosting enabled, with index document index.html.
+
+The DNS configuration for `status.buildbot.net` is configured as a CNAME for
+`status.buildbot.net.s3-website-us-east-1.amazonaws.com`.
+
+The bucket is configured with the following bucket policy to allow public read:
+
+    {
+      "Version":"2012-10-17",
+      "Statement":[
+        {
+          "Sid":"AddPerm",
+          "Effect":"Allow",
+          "Principal": "*",
+          "Action":["s3:GetObject"],
+          "Resource":["arn:aws:s3:::status.buildbot.net/*"]
+        }
+      ]
+    }
+
 Upscuits 
 ===============
 _Short for crispy uptime-biscuits_
