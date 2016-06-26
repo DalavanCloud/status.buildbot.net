@@ -1,5 +1,14 @@
 _In french / en français : [readme-fr.md](https://github.com/digibart/upscuits/blob/master/readme-fr.md)_
 
+Buildbot-Specific
+=================
+
+The public/ directory is mirrored to the S3 bucket `status.buildbot.net`, in
+Dustin's AWS account:
+
+    aws --profile s3-sync s3 mb s3://status.buildbot.net
+    aws --profile s3-sync s3 sync public s3://status.buildbot.net
+
 Upscuits 
 ===============
 _Short for crispy uptime-biscuits_
